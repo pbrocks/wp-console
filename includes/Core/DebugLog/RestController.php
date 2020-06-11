@@ -102,7 +102,7 @@ class RestController extends WP_REST_Controller {
 				sprintf( __( 'Log file: `%s` not found in your system.', 'wp-console' ), $log_file )
 			);
 		} else {
-			$log_file = array_reverse( $log_file );
+			// $log_file = array_reverse( $log_file );
 		}
 
 		// return array_reverse( $log_file );
