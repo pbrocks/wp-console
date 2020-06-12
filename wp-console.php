@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: WP Console
+ * Plugin Name: WPbrx Console
  * Plugin URI: https://github.com/ediamin/wp-console
  * Description: WordPress PHP Console powered by PsySH
  * Version: 2.1.0
@@ -32,17 +32,17 @@ define( 'WP_CONSOLE_ABSPATH', dirname( WP_CONSOLE_FILE ) );
  * @return mixed
  */
 function _dump( $var, ...$moreVars ) {
-    VarDumper::dump($var);
+	VarDumper::dump( $var );
 
-    foreach ( $moreVars as $v ) {
-        VarDumper::dump( $v );
-    }
+	foreach ( $moreVars as $v ) {
+		VarDumper::dump( $v );
+	}
 
-    if ( 1 < func_num_args() ) {
-        return func_get_args();
-    }
+	if ( 1 < func_num_args() ) {
+		return func_get_args();
+	}
 
-    return $var;
+	return $var;
 }
 
 /**
@@ -56,7 +56,7 @@ function _dump( $var, ...$moreVars ) {
  * @return \WPConsole
  */
 function wp_console() {
-    return WPConsole::instance();
+	return WPConsole::instance();
 }
 
 // Initialize plugin for the first time.
